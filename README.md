@@ -8,3 +8,5 @@
 ## work record
 
 ### Creation start date 2021/6/29
+Finished to 14 (firebase import from _App)
+Is _app the right import destination?
