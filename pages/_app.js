@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import "../src/service/firebase"
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
