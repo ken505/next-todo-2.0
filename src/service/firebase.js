@@ -14,3 +14,16 @@ const firebaseConfig = {
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
+
+const googleProvider = new firebase.auth.GoogleAuthProvider();
+export const signInWithGoogle = () => {
+  firebase
+    .auth()
+    .signInWithPopup(googleProvider)
+    .then((res) => {
+      // console.log(res.user);
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+};
