@@ -1,7 +1,12 @@
-import "../src/service/firebase"
+import "../src/service/firebase";
+import { AuthProvider } from "../src/providers/AuthProviders";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const MyApp = (props) => {
+  return (
+    <AuthProvider>
+      <props.Component {...props.pageProps} />
+    </AuthProvider>
+  );
+};
 
-export default MyApp
+export default MyApp;
