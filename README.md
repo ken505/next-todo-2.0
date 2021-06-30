@@ -7,6 +7,11 @@
 
 ## work record
 
-### Creation start date 2021/6/29
-Finished to 14 (firebase import from _App)
-Is _app the right import destination?
+### 2021/06/30
+Finished to 20
+Authentication information can now be read globally.
+
+### Creation start date 2021/06/29
+Finished to 14
+firebase import from _App.
+Is _app the right import destination? → maybe yes
