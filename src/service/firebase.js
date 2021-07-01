@@ -30,3 +30,16 @@ export const signInWithGoogle = () => {
       console.log(error.message);
     });
 };
+
+export const logOut = () => {
+  firebase
+    .auth()
+    .signOut()
+    .then(() => {
+      console.log("logged out");
+      document.location.reload();
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+};
