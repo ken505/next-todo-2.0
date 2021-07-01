@@ -7,6 +7,10 @@
 
 ## work record
 
+### 2021/07/01
+Finished to 26
+Create of post function.
+
 ### 2021/06/30
 Finished to 20
 Authentication information can now be read globally.
