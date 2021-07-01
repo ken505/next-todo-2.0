@@ -9,7 +9,7 @@ export const Header = () => {
   const changeLogButton = () => {
     let changeLogButtonDom;
     {
-      dig(currentUser, "currentUser")
+      dig(currentUser, "currentUser", "uid")
         ? (changeLogButtonDom = <button onClick={logOut}>Logout</button>)
         : (changeLogButtonDom = (
             <button onClick={signInWithGoogle}>Login</button>
