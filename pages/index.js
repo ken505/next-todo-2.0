@@ -8,5 +8,5 @@ export const Home = () => {
       <Dashboard />
     </div>
   );
-}
+};
 export default Home;

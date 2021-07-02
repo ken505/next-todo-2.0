@@ -1,28 +1,53 @@
 import { useState, useEffect, useContext } from "react";
 import dig from "object-dig";
-import { signInWithGoogle } from "../service/firebase";
+import { PlusCircleIcon } from "@heroicons/react/outline";
+// import { signInWithGoogle } from "../service/firebase";
 import { AuthContext } from "../providers/AuthProviders";
-import { addTodo } from "../service/api";
-// import ToDoList from "./ToDoList";
+import { addTodo, initGet } from "../service/api";
+import { TodoList } from "./TodoList";
 
 export const Dashboard = () => {
   const currentUser = useContext(AuthContext);
   const [inputName, setInputName] = useState("");
+  const [todos, setTodos] = useState([]);
   // console.log(inputName)
+  // console.log(todos);
+
+  useEffect(() => {
+    initialDataFetch();
+  }, [currentUser]);
+
+  const initialDataFetch = async () => {
+    if (dig(currentUser, "currentUser", "uid")) {
+      const targetUserData = await initGet(currentUser.currentUser.uid);
+      await setTodos(targetUserData);
+    }
+  };
+
   const formRender = () => {
     let formRenderDom;
     {
       dig(currentUser, "currentUser", "uid")
         ? (formRenderDom = (
-            <form>
+            <form className="flex">
               <input
                 placeholder="Your todo"
                 value={inputName}
                 onChange={(e) => setInputName(e.currentTarget.value)}
               />
-              <button type="button" onClick={() => post()}>
+              {/* <button
+                type="button"
+                disabled={inputName.length > 0 ? false : true}
+                onClick={() => post()}
+              >
                 Add
-              </button>
+              </button> */}
+              <PlusCircleIcon
+                className="h-5 w-5 text-blue-500"
+                type="button"
+                disabled={inputName.length > 0 ? false : true}
+                onClick={() => post()}
+              />
             </form>
           ))
         : (formRenderDom =
@@ -32,11 +57,18 @@ export const Dashboard = () => {
     return formRenderDom;
   };
 
-  const post = () => {
-    addTodo(inputName, currentUser.currentUser.uid);
-    setInputName("");
-    // fetch();
+  const post = async () => {
+    await addTodo(inputName, currentUser.currentUser.uid);
+    // ↓ post 後 input 欄に空文字をセット
+    await setInputName("");
+    // acync awit と ↓ の読み込みで post 内容をレンダリング
+    initialDataFetch();
   };
 
-  return <div>{formRender()}</div>;
+  return (
+    <div>
+      {formRender()}
+      <TodoList todos={todos} initialDataFetch={initialDataFetch} />
+    </div>
+  );
 };
