@@ -52,3 +52,14 @@ export const addTodo = (content, uid) => {
 export const todoDelete = (id) => {
   db.collection("todo").doc(id).delete();
 };
+
+export const toggleComplete = async (id) => {
+  const todo = await db.collection("todo").doc(id).get();
+  return db
+    .collection("todo")
+    .doc(id)
+    .update({
+      isComplete: todo.data().isComplete ? false : true,
+      updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+};
