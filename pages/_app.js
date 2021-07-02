@@ -1,4 +1,5 @@
 import "../src/service/firebase";
+import 'tailwindcss/tailwind.css'
 import { AuthProvider } from "../src/providers/AuthProviders";
 
 const MyApp = (props) => {
