@@ -34,10 +34,10 @@ class MyDocument extends Document {
             name="msapplication-square310x310logo"
             content="/site-tile-310x310.png"
           />
-          <meta name="msapplication-TileColor" content="#000" />
+          <meta name="msapplication-TileColor" content="#fff" />
           {/* safari */}
           <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="#fff" />
           <meta name="apple-mobile-web-app-title" content="Todo-App" />
           <link
             rel="apple-touch-icon"
