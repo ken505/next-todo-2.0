@@ -1,5 +1,5 @@
 import { Header } from "../src/components/Header";
-import { Dashboard } from "../src/components/Dasboard";
+import { Dashboard } from "../src/components/Dashboard";
 
 export const Home = () => {
   return (

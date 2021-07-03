@@ -6,7 +6,7 @@ import { AuthContext } from "../providers/AuthProviders";
 
 export const Header = () => {
   const currentUser = useContext(AuthContext);
-  console.log(currentUser);
+  // console.log(currentUser);
   const changeLogButton = () => {
     let changeLogButtonDom;
     {
