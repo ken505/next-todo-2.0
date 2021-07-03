@@ -2,10 +2,27 @@
 
 ## Creating a todo app that can manage data by user using next.js and firebase
 
-#### Features to be added in the end
-* pwa
+#### Issues
+
+* Sometimes, reloading during delete operation does not work properly.
+* Tailwindcss styling causes display collapse on mobile.
+
+* PWA Implementation
+  * Icon screen is blacked out.
+  * Only safari can be added to the home screen.
+  * Failed to load resource: the server responded with a status of 404.
+  * Manifest: Line: 1, column: 1, Syntax error.
+  * (Failed to load resource: the server responded with a status of 404. )
+
 
 ## work record
+
+### 2021/07/03
+Implementing the pwa function.
+
+### 2021/07/02
+CLUD implementation completed.
+Styling with some tailwindcss.
 
 ### 2021/07/01
 Finished to 26
