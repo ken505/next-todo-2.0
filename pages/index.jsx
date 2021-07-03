@@ -9,7 +9,7 @@ export const Home = () => {
       font-mono text-gray-100 dark:text-gray-400
       bg-gradient-to-tr 
     from-pink-400 via-blue-300 to-green-200
-    dark:from-gray-900 dark:via-pink-500 dark:to-purple-800"
+    dark:from-indigo-700 dark:via-purple-600 dark:to-pink-500"
     >
       <Header />
       <Dashboard />
