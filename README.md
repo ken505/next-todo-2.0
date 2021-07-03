@@ -8,12 +8,21 @@
 * Tailwindcss styling causes display collapse on mobile.
 
 * PWA Implementation
-  * Icon screen is blacked out.
-  * Only safari can be added to the home screen.
+  * Common Issues
   * Failed to load resource: the server responded with a status of 404.
-  * Manifest: Line: 1, column: 1, Syntax error.
   * (Failed to load resource: the server responded with a status of 404. )
+  * Manifest: Line: 1, column: 1, Syntax error.
 
+  * Safari Issue
+    * Icon screen is blacked out.
+    * (Only safari can be added to the home screen.)
+
+  * chrome × iphone Issue
+    * Unable to process request due to missing initial state.
+    This may happen if browser sessionStorage is inaccessible or accidentally cleared.
+    * Is this message that sometimes appears due to the cache?
+
+  * Not tested for windows android and others.
 
 ## work record
 
