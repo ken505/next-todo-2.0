@@ -50,17 +50,17 @@ class MyDocument extends Document {
           <meta name="description" content="Todo-App" />
           <link rel="icon" sizes="192x192" href="/icon-192x192.png" />
           <link rel="icon" href="/favicon.ico" />
-          {/* <link rel="manifest" href="/manifest.json" /> */}
+          <link rel="manifest" href="/manifest.json" />
           {/* <link
             rel="manifest"
             href="/manifest.json"
             crossorigin="use-credentials"
           /> */}
-          <link
+          {/* <link
             rel="manifest"
             crossorigin="use-credentials"
             href="%PUBLIC_URL%/manifest.json"
-          />
+          /> */}
         </Head>
 
         <body>
