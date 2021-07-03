@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from "react";
-import dig from "object-dig";
 import { PlusCircleIcon } from "@heroicons/react/outline";
-// import { signInWithGoogle } from "../service/firebase";
+import dig from "object-dig";
 import { AuthContext } from "../providers/AuthProviders";
 import { addTodo, initGet } from "../service/api";
 import { TodoList } from "./TodoList";
+import { signInWithGoogle } from "../service/firebase";
 
 export const Dashboard = () => {
   const currentUser = useContext(AuthContext);
@@ -44,8 +44,8 @@ export const Dashboard = () => {
               </button> */}
               <PlusCircleIcon
                 className="h-5 w-5 text-blue-500"
-                type="button"
                 disabled={inputName.length > 0 ? false : true}
+                type="button"
                 onClick={() => post()}
               />
             </form>
