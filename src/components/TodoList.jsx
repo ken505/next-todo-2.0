@@ -20,16 +20,19 @@ export const TodoList = (props) => {
 
   const todoList = props.todos.map((todo) => {
     return (
-      <li className="flex" key={todo.id}>
+      <li className="flex justify-center items-center mt-3" key={todo.id}>
         <input
-          className=" h-4 w-4 text-blue-500"
+          className="h-8 w-8 mr-5 cursor-pointer form-checkbox rounded-full focus:outline-none
+                  text-gray-300 dark:text-gray-400
+                    hover:opacity-60 dark:hover:opacity-5"
           type="checkbox"
           checked={todo.isComplete}
           onChange={() => checkHandler(todo.id)}
         />
-        {todo.content}
+        <p className="w-48 sm:w-96 p-3 rounded-md focus:outline-none focus:ring
+                    dark:text-gray-200 dark:bg-gray-500">{todo.content}</p>
         <XCircleIcon
-          className="h-5 w-5 text-blue-500"
+          className="h-10 w-10 ml-3 cursor-pointer hover:opacity-60 dark:hover:opacity-5"
           onClick={() => deleteHandler(todo.id)}
         />
         {/* <button
