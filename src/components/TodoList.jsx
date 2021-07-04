@@ -22,7 +22,7 @@ export const TodoList = (props) => {
     return (
       <li className="flex justify-center items-center mt-3" key={todo.id}>
         <input
-          className="h-8 w-8 mr-5 cursor-pointer form-checkbox rounded-full focus:outline-none
+          className="h-8 w-8 mr-5 cursor-pointer form-checkbox rounded-full 
                   text-gray-300 dark:text-gray-400
                     hover:opacity-60 dark:hover:opacity-5"
           type="checkbox"

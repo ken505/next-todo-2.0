@@ -51,7 +51,7 @@ export const Dashboard = () => {
               </button> */}
               <PlusCircleIcon
                 className="h-10 w-10 ml-3 
-                           cursor-pointer hover:opacity-60 dark:hover:opacity-5"
+                          cursor-pointer hover:opacity-60 dark:hover:opacity-5"
                 disabled={inputName.length > 0 ? false : true}
                 type="button"
                 onClick={() => post()}

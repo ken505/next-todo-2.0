@@ -11,7 +11,7 @@ export const SnsShare = () => {
         <TwitterIcon
           size={32}
           round
-          className="hover:opacity-70 dark:opacity-40 mx-1 my-1"
+          className="cursor-pointer hover:opacity-70 dark:opacity-40 mx-1 my-1"
         />
       </TwitterShareButton>
     </div>
