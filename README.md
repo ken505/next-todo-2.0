@@ -2,6 +2,11 @@
 
 ## Creating a Todo-App that can manage data by user using next.js and firebase
 
+#### What I wanna improve
+
+- I want to organize the implementation of acync await using hooks.
+- I wanna replace the forEach and push statements with map and split assignments.
+
 #### Issues
 
 - Sometimes, reloading during delete operation does not work properly.
@@ -41,6 +46,7 @@ Implementation details
 - Add twitter share function.
 - Added the ability to explain the dark mode by react-hot-toast.
 - [Issue](https://github.com/tailwindlabs/heroicons/issues/306#issue-936387554) recommendations to hero icons.
+- Refactor code.
 
 ### 2021/07/03
 
@@ -68,4 +74,4 @@ Implementation details
 
 - Finished to 14
 - firebase import from \_App.
-- Is \_app the right import destination? → maybe yes
+- Is \_app the right import destination? → maybe yes.

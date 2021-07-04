@@ -24,11 +24,12 @@ const notify = () =>
       <div className="flex border-l border-gray-200">
         <button
           onClick={() => toast.dismiss(t.id)}
-          className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium 
-        text-gray-600 hover:text-gray-500 
-          focus:outline-none"
+          className="w-full border border-transparent rounded-none rounded-r-lg p-4 
+                    flex items-center justify-center text-sm font-medium 
+                  text-gray-600 hover:text-gray-500 
+                    focus-within:dark focus:outline-none"
         >
-          close
+          Close
         </button>
       </div>
     </div>
@@ -38,10 +39,7 @@ export const ThemeInfoToast = () => {
   return (
     <div className="flex flex-col fixed top-3 right-3">
       <button onClick={notify}>
-        <InformationCircleIcon
-          className="h-8 w-8 cursor-pointer
-                    hover:opacity-70 focus-within:dark:opacity-40"
-        />
+        <InformationCircleIcon className="h-8 w-8 cursor-pointer hover:opacity-70 focus-within:dark:opacity-40" />
       </button>
       <Toaster />
     </div>

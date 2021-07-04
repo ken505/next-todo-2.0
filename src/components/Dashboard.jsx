@@ -5,7 +5,6 @@ import { AuthContext } from "../providers/AuthProviders";
 import { addTodo, initGet } from "../service/api";
 import { Header } from "../components/Header";
 import { TodoList } from "./TodoList";
-// import { signInWithGoogle } from "../service/firebase";
 
 export const Dashboard = () => {
   const currentUser = useContext(AuthContext);
@@ -13,7 +12,6 @@ export const Dashboard = () => {
   const [todos, setTodos] = useState([]);
   // console.log(inputName)
   // console.log(todos);
-
   useEffect(() => {
     initialDataFetch();
   }, [currentUser]);
@@ -42,14 +40,6 @@ export const Dashboard = () => {
                 value={inputName}
                 onChange={(e) => setInputName(e.currentTarget.value)}
               />
-              {/* <button
-                type="button"
-                disabled={inputName.length > 0 ? false : true}
-                onClick={() => post()}
-              >
-                Add
-              </button> */}
-
               <PlusCircleIcon
                 className="h-10 w-10 ml-3 cursor-pointer hover:opacity-60 dark:hover:opacity-5"
                 disabled={inputName.length > 0 ? false : true}
@@ -58,21 +48,14 @@ export const Dashboard = () => {
               />
             </form>
           ))
-        : (formRenderDom = (
-            // <form onClick={signInWithGoogle}>Login</form>
-            // null
-            <Header />
-          ));
+        : (formRenderDom = <Header />);
     }
-
     return formRenderDom;
   };
 
   const post = async () => {
     await addTodo(inputName, currentUser.currentUser.uid);
-    // ↓ post 後 input 欄に空文字をセット
     await setInputName("");
-    // acync awit と ↓ の読み込みで post 内容をレンダリング
     initialDataFetch();
   };
 
@@ -83,3 +66,4 @@ export const Dashboard = () => {
     </div>
   );
 };
+//<button type="button"disabled={inputName.length > 0 ? false : true}onClick={() => post()}>Add</button>;

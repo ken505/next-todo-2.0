@@ -11,8 +11,7 @@ export const Header = () => {
     let changeLogButtonDom;
     {
       dig(currentUser, "currentUser", "uid")
-        ? // ? (changeLogButtonDom = <button onClick={logOut}>Logout</button>)
-          (changeLogButtonDom = (
+        ? (changeLogButtonDom = (
             <LogoutIcon
               className="h-10 w-10 cursor-pointer hover:opacity-60 dark:hover:opacity-5"
               onClick={logOut}
@@ -32,18 +31,3 @@ export const Header = () => {
   };
   return <div>{changeLogButton()}</div>;
 };
-
-// export const Header = () => {
-//   const currentUser = useContext(AuthContext);
-//   console.log(currentUser)
-//   const changeLogButton = () => {
-//     let changeLogButtonDom;
-//     if (dig(currentUser, "currentUser")) {
-//       changeLogButtonDom = <button onClick={logOut}>Logout</button>;
-//     } else {
-//       changeLogButtonDom = <button onClick={signInWithGoogle}>Login</button>;
-//     }
-//     return changeLogButtonDom;
-//   };
-//   return <div>{changeLogButton()}</div>;
-// };

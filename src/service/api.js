@@ -10,8 +10,8 @@ export const initGet = async (uid) => {
   return todo.get().then((snapShot) => {
     let todos = [];
     snapShot.forEach((doc) => {
-      // map との比較
-      // push で破壊してる
+      // map を使いたい
+      // push をやめて分割代入できないか？
       // console.log(doc);
       // console.log(doc.data);
       todos.push({
@@ -23,22 +23,6 @@ export const initGet = async (uid) => {
     return todos;
   });
 };
-
-// const [tasks, setTasks] = useState([
-//   {
-//     id: "",
-//     content: "",
-//     isComplete: "",
-//   },
-// ]);
-
-// setTasks(
-// snapshot.docs.map((doc) => ({
-//   id: doc.id,
-//   content: doc.data().content,
-//   isComplete: doc.data().isComplete,
-// }));
-// );
 
 export const addTodo = (content, uid) => {
   db.collection("todo").add({
