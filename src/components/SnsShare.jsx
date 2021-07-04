@@ -5,7 +5,7 @@ export const SnsShare = () => {
     <div className="flex flex-col fixed top-3 left-3 ">
       <TwitterShareButton
         className="focus:outline-none focus:ring rounded-md"
-        url="https://vercel.com/ken505/next-todo-2-0"
+        url="https://next-todo-2-0.vercel.app/"
         title="Next Todo - App"
       >
         <TwitterIcon
