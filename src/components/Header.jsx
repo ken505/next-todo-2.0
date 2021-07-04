@@ -24,7 +24,7 @@ export const Header = () => {
                 className="h-8 w-8 mr-1 cursor-pointer hover:opacity-60 dark:hover:opacity-50"
                 onClick={signInWithGoogle}
               />
-              <p>Google Login</p>
+              <p>Sign in with your Google account</p>
             </div>
           ));
     }
