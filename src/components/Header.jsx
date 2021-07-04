@@ -13,13 +13,19 @@ export const Header = () => {
       dig(currentUser, "currentUser", "uid")
         ? // ? (changeLogButtonDom = <button onClick={logOut}>Logout</button>)
           (changeLogButtonDom = (
-            <LogoutIcon className="h-5 w-5 text-blue-500" onClick={logOut} />
+            <LogoutIcon
+              className="h-10 w-10 cursor-pointer hover:opacity-60 dark:hover:opacity-5"
+              onClick={logOut}
+            />
           ))
         : (changeLogButtonDom = (
-            <LoginIcon
-              className="h-5 w-5 text-blue-500"
-              onClick={signInWithGoogle}
-            />
+            <div className="flex justify-center items-center">
+              <LoginIcon
+                className="h-8 w-8 mr-1 cursor-pointer hover:opacity-60 dark:hover:opacity-50"
+                onClick={signInWithGoogle}
+              />
+              <p>Google Login</p>
+            </div>
           ));
     }
     return changeLogButtonDom;
