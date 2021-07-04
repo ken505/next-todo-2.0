@@ -6,6 +6,7 @@
 
 * Sometimes, reloading during delete operation does not work properly.
 * Tailwindcss styling causes display collapse on mobile.
+  * 🙅‍♀️ Safari PlusCircleIcon
 
 * PWA Implementation
   * Common Issues
