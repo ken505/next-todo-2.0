@@ -5,7 +5,7 @@ import { AuthContext } from "../providers/AuthProviders";
 import { addTodo, initGet } from "../service/api";
 import { Header } from "../components/Header";
 import { TodoList } from "./TodoList";
-import { signInWithGoogle } from "../service/firebase";
+// import { signInWithGoogle } from "../service/firebase";
 
 export const Dashboard = () => {
   const currentUser = useContext(AuthContext);
@@ -50,8 +50,8 @@ export const Dashboard = () => {
                 Add
               </button> */}
               <PlusCircleIcon
-                className="h-10 w-10 ml-3 
-                          cursor-pointer hover:opacity-60 dark:hover:opacity-5"
+                className="h-10 w-10 ml-3 cursor-pointer hover:opacity-60 dark:hover:opacity-5
+                flex items-center self-center"
                 disabled={inputName.length > 0 ? false : true}
                 type="button"
                 onClick={() => post()}
