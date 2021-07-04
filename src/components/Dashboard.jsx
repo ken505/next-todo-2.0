@@ -3,6 +3,7 @@ import { PlusCircleIcon } from "@heroicons/react/outline";
 import dig from "object-dig";
 import { AuthContext } from "../providers/AuthProviders";
 import { addTodo, initGet } from "../service/api";
+import { Header } from "../components/Header";
 import { TodoList } from "./TodoList";
 import { signInWithGoogle } from "../service/firebase";
 
@@ -29,9 +30,15 @@ export const Dashboard = () => {
     {
       dig(currentUser, "currentUser", "uid")
         ? (formRenderDom = (
-            <form className="flex">
+            <form className="flex justify-center items-center">
+              <Header />
               <input
-                placeholder="Your todo"
+                className="ml-3 w-48 sm:w-96 p-3
+                        text-gray-500 dark:text-gray-300
+                          rounded-md focus:outline-none focus:ring
+                        placeholder-gray-400
+                        dark:bg-gray-500"
+                placeholder="New Task?"
                 value={inputName}
                 onChange={(e) => setInputName(e.currentTarget.value)}
               />
@@ -43,17 +50,21 @@ export const Dashboard = () => {
                 Add
               </button> */}
               <PlusCircleIcon
-                className="h-5 w-5 text-blue-500"
+                className="h-10 w-10 ml-3 
+                           cursor-pointer hover:opacity-60 dark:hover:opacity-5"
                 disabled={inputName.length > 0 ? false : true}
                 type="button"
                 onClick={() => post()}
               />
             </form>
           ))
-        : (formRenderDom =
+        : (formRenderDom = (
             // <form onClick={signInWithGoogle}>Login</form>
-            null);
+            // null
+            <Header />
+          ));
     }
+
     return formRenderDom;
   };
 
