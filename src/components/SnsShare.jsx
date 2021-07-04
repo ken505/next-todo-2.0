@@ -6,7 +6,7 @@ export const SnsShare = () => {
       <TwitterShareButton
         className="focus:outline-none focus:ring rounded-md"
         url="https://vercel.com/ken505/next-todo-2-0"
-        title="Todo - App"
+        title="Next Todo - App"
       >
         <TwitterIcon
           size={32}
