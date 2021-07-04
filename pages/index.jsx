@@ -1,6 +1,9 @@
 import { Dashboard } from "../src/components/Dashboard";
+import { SnsShare } from "../src/components/SnsShare";
+import { ThemeInfoToast } from "../src/components/ThemeInfoToast";
 
 export const Home = () => {
+  
   return (
     <div
       className="min-h-screen py-12
@@ -9,6 +12,8 @@ export const Home = () => {
               from-pink-400 via-blue-300 to-green-200
               dark:from-indigo-700 dark:via-purple-600 dark:to-pink-500"
     >
+      <ThemeInfoToast />
+      <SnsShare />
       <p className="flex justify-center mb-5 font-bold">Next Todo-App</p>
       <Dashboard />
     </div>
