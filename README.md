@@ -4,8 +4,9 @@
 
 #### What I wanna improve
 
-- I want to organize the implementation of acync await using hooks.
-- I wanna replace the forEach and push statements with map and split assignments.
+- Organize the implementation of acync await using hooks.
+- Replace the forEach and push statements with map and split assignments.
+- Implementing typescript.
 
 #### Issues
 
@@ -38,10 +39,12 @@
 
 ## work record
 
+### 2021/07/10
+- Refactor code.
+- Add Eslint config.
+
 ### 2021/07/04
-
 Implementation details
-
 - Styling with tailwindcss.
 - Add twitter share function.
 - Added the ability to explain the dark mode by react-hot-toast.
@@ -49,29 +52,23 @@ Implementation details
 - Refactor code.
 
 ### 2021/07/03
-
 Implementation details
-
 - Styling with tailwindcss.
 - pwa function.
 
 ### 2021/07/02
-
 - CLUD implementation completed.
 - Styling with some tailwindcss.
 
 ### 2021/07/01
-
 - Finished to 26
 - Create of post function.
 
 ### 2021/06/30
-
 - Finished to 20
 - Authentication information can now be read globally.
 
 ### Creation start date 2021/06/29
-
 - Finished to 14
 - firebase import from \_App.
 - Is \_app the right import destination? → maybe yes.
