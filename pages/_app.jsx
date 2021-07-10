@@ -3,7 +3,7 @@ import "../src/service/firebase";
 import "tailwindcss/tailwind.css";
 import { AuthProvider } from "../src/providers/AuthProviders";
 
-export const MyApp = (props) => {
+const MyApp = (props) => {
   return (
     <AuthProvider>
       <Head>

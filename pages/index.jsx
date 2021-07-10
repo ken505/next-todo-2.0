@@ -2,7 +2,7 @@ import { Dashboard } from "../src/components/Dashboard";
 import { SnsShare } from "../src/components/SnsShare";
 import { ThemeInfoToast } from "../src/components/ThemeInfoToast";
 
-export const Home = () => {
+const Home = () => {
   
   return (
     <div
